@@ -102,6 +102,7 @@
                                 </div>
                                 <button class="text-box-expand">Больше</button>
                                 <?php
+
                                 if($product->is_purchasable()){
                                     ?>
                                     <button class="main-button add-to-cart">
