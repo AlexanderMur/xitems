@@ -2,7 +2,7 @@
 if(!defined('ABSPATH')){
     exit;
 }
-if ( ! function_exists( 'fragaris_setup' ) ) :
+if ( ! function_exists( 'xitems_setup' ) ) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -10,7 +10,7 @@ if ( ! function_exists( 'fragaris_setup' ) ) :
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    function fragaris_setup() {
+    function xitems_setup() {
         /*
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
@@ -52,9 +52,9 @@ if ( ! function_exists( 'fragaris_setup' ) ) :
         add_theme_support('woocommerce');
     }
 endif;
-add_action( 'after_setup_theme', 'fragaris_setup' );
-function fragaris_content_width() {
-    $GLOBALS['content_width'] = apply_filters( 'fragaris_content_width', 640 );
+add_action( 'after_setup_theme', 'xitems_setup' );
+function xitems_content_width() {
+    $GLOBALS['content_width'] = apply_filters( 'xitems_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'fragaris_content_width', 0 );
+add_action( 'after_setup_theme', 'xitems_content_width', 0 );
 ?>
