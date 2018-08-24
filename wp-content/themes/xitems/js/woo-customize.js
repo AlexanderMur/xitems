@@ -124,10 +124,15 @@ jQuery(document).ready(function ($) {
       return false;
     } );
 
-    $('body').removeClass('loaded');
+    let testx = function() {
+        let test = 'res';
+
+    };
 
     return false;
   });
+
+  /*привет*/
 
 });
 
