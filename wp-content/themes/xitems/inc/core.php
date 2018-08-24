@@ -32,35 +32,3 @@ function array_to_cols($arr,$num){
     }
     return $cols;
 }
-
-
-function func($name){
-    return $name . ' works';
-}
-
-function func3($name){
-    return $name . ' works';
-}
-
-function func2($name){
-    if (true) {
-        return $name . ' works';
-    }
-}
-function func5(){
-    return '1321212';
-}
-
-function func6(){
-    return 1;
-}
-
-function func7() {
-    return '2';
-}
-function func9(){
-    return 3;
-}
-function func8() {
-    return '3';
-}
