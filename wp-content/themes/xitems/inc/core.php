@@ -38,10 +38,15 @@ function func($name){
     return $name . ' works';
 }
 
-function func2($name){
+function func3($name){
     return $name . ' works';
 }
 
+function func2($name){
+    if (true) {
+        return $name . ' works';
+    }
+}
 function func5(){
     return '132';
 }
