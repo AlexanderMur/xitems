@@ -27,14 +27,16 @@ jQuery(document).ready(function ($) {
         }
 
         onFoundVariation(event, variation) {
-            const $img = this.imageWrapper.find('img')
-            $img.hide();
-            $img.attr('src', variation.image.src);
-            $img.attr('alt', variation.image.alt);
-            $img.fadeIn();
-            this.elem.attr('price', variation.display_price);
-            if (this.elem.hasClass('addToCartSingle')) { this.elem.find('.price span').text(variation.display_price)};
-            $('#amount').text(variation.display_price)
+            if(this.elem.is('.slick-active')){
+              const $img = this.imageWrapper.find('img')
+              $img.hide();
+              $img.attr('src', variation.image.src);
+              $img.attr('alt', variation.image.alt);
+              $img.fadeIn();
+              this.elem.attr('price', variation.display_price);
+              if (this.elem.hasClass('addToCartSingle')) { this.elem.find('.price span').text(variation.display_price)};
+              $('#amount').text(variation.display_price)
+            }
         }
     }
 
