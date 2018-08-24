@@ -32,3 +32,7 @@ function array_to_cols($arr,$num){
     }
     return $cols;
 }
+
+function fu2() {
+    return '2';
+}
