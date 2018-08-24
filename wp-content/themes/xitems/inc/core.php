@@ -58,7 +58,9 @@ function func6(){
 function func7() {
     return '2';
 }
-
+function func9(){
+    return 3;
+}
 function func8() {
     return '3';
 }
