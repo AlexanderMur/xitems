@@ -124,12 +124,10 @@ jQuery(document).ready(function ($) {
       return false;
     } );
 
-    function func3(){
-      return '131331';
-    }
-  });
+    $('body').removeClass('loaded');
 
-  /*привет*/
+    return false;
+  });
 
 });
 
