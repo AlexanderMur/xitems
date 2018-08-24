@@ -14,7 +14,6 @@ function get_product_gift($product){
         $product = $product->get_id();
     }
     $arr = xi_post_meta($product,'gift');
-    $gift_id = 0;
     if(!empty($arr)){
         $gift_id = $arr[0]['id'];
         return wc_get_product($gift_id);
