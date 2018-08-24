@@ -1,0 +1,234 @@
+
+/*
+================================================================================
+|                                     HEADER                                   |
+================================================================================
+*/
+header{
+	background: transparent;
+	width:100%;
+	min-width: $min-width;
+	text-align:left;	
+	order: 1;	
+    -webkit-order: 1;	
+}
+
+.header{
+	padding: 30px 30px;
+	&-container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&-left{
+		width: 100%;
+		max-width: 160px;
+	}
+	&.header-logo{
+		width: 100%;
+		display: block;
+	}
+	&-right{
+		display: flex;
+		align-items: center;
+	}
+	&-phone{
+		font-size: 24px;
+		font-weight: 300;
+		color: $text-color;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	&-cartBtn{
+		background-color: transparent;
+		border: none;
+		height: 84px;
+		margin: 0 45px;
+		top: 0;
+		right: 0;
+		position: relative;
+		@include transition($default-transition);
+		&-icon{
+			background-color: red;
+			border: none;
+			border-radius: 50%;			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 60px;
+			height: 60px;
+			box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.4);
+			@include transition($default-transition);
+		}
+		&-amount{
+			background-color: $main-color;
+			color: #fff;
+			display: flex;
+			position: absolute;
+			border-radius: 50%;
+			border: 4px solid white;
+			width: 24px;
+			height: 24px;
+			font-size: 18px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			top: 8px;
+			right: -6px;
+			@include transition($default-transition);
+		}
+		&:hover{
+			opacity: .8;
+			.header-cartBtn-icon{
+				box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+			}
+		}
+		&.active{
+			position: absolute;
+		    z-index: 999;
+		    top: 130px;
+		    right: 246px;
+		}		
+	}
+	&-nav{
+		@include transition($default-transition);
+		&__btn{
+			background-color: transparent;
+			border: none;
+			position: relative;
+			display: block;
+			width: 84px;
+			height: 84px;
+			right: 0;
+			border-radius: 50%;
+			box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0);
+			@include transition(all .6s ease-in);
+			span{
+				display: block;
+				width: 44px;
+				height: 4px;
+				background-color: black;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include transform(translate(-50%, -50%));
+				@include transition($default-transition);
+				&:nth-child(1){
+					margin-top: -10px;
+				}
+				&:nth-child(3){
+					margin-top: 10px;
+				}
+			}
+			&:hover{
+				
+			}
+			&.active{
+				background-color: $main-color;
+				span{
+					&:nth-child(1){
+						margin-top: -8px;
+						height: 2px;
+						width: 32px;
+					}
+					&:nth-child(3){
+						margin-top: 8px;
+						height: 2px;
+						width: 32px;
+					}
+				}
+			}
+		}
+		&.active{
+			display: block;
+			position: fixed;
+			z-index: 99;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.5);
+			.header-nav__btn{
+				right: 278px;
+				top: 30px;
+				position: absolute;
+				background-color: $main-color;
+				box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.4);
+				z-index: 999;
+				span{
+					background-color: #fff;
+				}
+			}
+			.header-nav-list{
+				position: absolute;
+			}
+		}
+		&__container{
+			display: block;
+			width: 84px;
+			width: 84px;
+		}
+		&-list{
+			display: block;
+			position: fixed;
+			top: 0%;
+			right: -100%;
+			height: 100%;
+			width: 100%;
+			max-width: 320px;
+			padding: 33px 33px 33px 130px;
+			background-color: #fff;
+			box-shadow: 0px 5px 4.75px 0.25px rgba(0, 0, 0, 0.5);
+			text-align: right;
+			@include transition(all 1s ease);
+			li{
+				display: block;
+				margin: 44px 0;
+				text-outline: 0;
+			}
+			a{
+				color: #000;
+				font-size: 22px;
+				&:hover{
+					text-decoration: underline;
+					color: $main-color;
+				}
+			}
+			&.active{
+				right: 0;
+			}
+		}
+	}
+	&.isOnePageScroll{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 999;
+	}
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+	
+}
+
+@media screen and (min-width: 992px){
+	
+}
+
+@media screen and (max-width: 991px) {
+	
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+@media screen and (max-width: 767px) {
+	
+}

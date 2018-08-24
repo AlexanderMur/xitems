@@ -1,0 +1,33 @@
+/* reset */
+$min-width: 320px; 
+$max-width: 1894px; 
+$base-bg: #FFF; 
+$base-font-size: 20px; 
+$base-line-height: 24px; 
+$base-font-family: 'Roboto', sans-serif; 
+$custom-font-family: 'Roboto', sans-serif; 
+$default-transition:all 0.3s linear;
+
+/* main variables */
+
+// colors 
+$main-color: #448aff;
+$main-hover: #74a8ff;
+
+$custom-color: #000;
+$custom-hover: #333;
+
+//text, titles
+$text-color: #000;
+$title-color: #000;
+$title-font-family: $custom-font-family;
+
+$link-color: #100da9;
+$link-hover: #0000ff;
+
+$font-size-h1: 52px;
+$line-height-h1: 58px;
+$font-size-h2: 48px;
+$line-height-h2: 54px;
+$font-size-h3: 32px;
+$line-height-h3: 36px;

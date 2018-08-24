@@ -1,0 +1,12 @@
+{
+    "name": "alvmu/xitems",
+    "authors": [
+        {
+            "name": "Alexey Muravev",
+            "email": "alvmuravev@hotmail.com"
+        }
+    ],
+    "require": {
+        "htmlburger/carbon-fields": "^2.2"
+    }
+}

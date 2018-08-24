@@ -1,0 +1,350 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-height : 1079px) {
+	.onePage-scroll{
+		.wrapper{
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.page-title
+			h2{
+				margin-bottom: 70px;
+				line-height: 60px;
+			}
+	}
+	.pageControls{
+		padding-bottom: 15px;
+	}
+
+	.productCard{
+		&-text{
+			p{
+				font-size: 20px;
+				line-height: 24px;
+			}
+		}
+	}
+
+	.benefits-item{
+		margin-bottom: 100px;
+	}
+
+	.reviews{
+		&-item{
+			padding: 20px 100px;
+		}
+		&-form{
+			padding: 20px 100px;
+		}
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-height : 991px) {
+	body, p, li{
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	h1{
+		font-size: 32px;
+		line-height: 36px;
+		margin: 10px 0;
+	}
+
+	h2{
+		font-size: 26px;
+		line-height: 30px;
+		margin: 10px 0;
+	}
+
+	h3{
+		font-size: 22px;
+		line-height: 26px;
+		margin: 10px 0;
+	}
+
+	p{
+		margin: 10px 0;
+	}
+
+	.catalog{
+		&-item{
+			&__text{
+				flex-direction: column;
+				align-items: flex-start;
+				.text-box{
+					margin-top: 15px;
+					max-height: 180px
+				}
+			}
+			.price{
+				align-self: flex-start;
+				margin-right: 0;
+				flex: 1 1 auto;
+				margin-top: 20px;
+			}
+			&__preview{
+				width: 40%;
+				max-width: 40%;
+				.img-wrapper{
+					align-items: center;
+					img{
+						max-width: 300px;
+						height: auto;
+					}
+				}
+			}
+			&__number{
+				font-size: 32px;
+				.current{
+					font-size: 70px;
+				}
+				.progress{
+					margin-top: 30px;
+				}
+			}
+		}
+		&-categories{
+			@include transform(scale(0.8));
+			bottom: -60px;
+			right: -60px;
+			.price{
+				font-size: 24px;
+			}
+		}
+	}
+
+	.checkout{
+		&-item{
+			&.active{
+				padding-top: 50px;
+				padding-right: 50px;
+			}
+		}
+		&-cart{
+			&__item{
+				margin-bottom: 60px;
+				padding-right: 16px;
+				.remove-item{
+					right: 16px;
+				}
+			}
+		}
+	}
+
+	.main-button{
+		&.add-to-cart{
+			margin-top: 20px;
+		}
+	}
+
+	.onePage-scroll{
+		.page-title{
+			h2{
+				font-size: 48px;
+				line-height: 52px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	.description{
+		.title{
+			h1{
+				margin-bottom: 40px;
+			}
+			span{
+				font-size: 28px;
+				line-height: 32px;
+				&.before-text{
+					font-size: 62px;
+					line-height: 68px;
+				}
+				&.after-text{
+					font-size: 72px;
+					line-height: 80px;
+				}
+			}
+		}
+		.text-bottom{
+			font-size: 42px;
+			line-height: 46px;
+		}
+	}
+
+	.productCard{
+		&-slider{
+			max-width: 450px;
+		}
+		&-text{
+			p, li{
+				font-size: 16px;
+				line-height: 22px;
+			}
+		}
+	}
+
+	.benefits-item{
+		margin-bottom: 50px;
+	}
+
+	.reviews-item{
+		padding: 10px 50px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-height : 767px) {
+	body, p, li{
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+	h1{
+		font-size: 28px;
+		line-height: 32px;
+		margin: 10px 0;
+	}
+
+	h2{
+		font-size: 22px;
+		line-height: 26px;
+		margin: 8px 0;
+	}
+
+	h3{
+		font-size: 18px;
+		line-height: 22px;
+		margin: 8px 0;
+	}
+
+	p{
+		margin: 10px 0;
+	}
+
+	.header{
+		padding: 10px 30px;
+	}
+
+	.catalog{
+		&-item{
+			&__number{
+				&::after{
+					display: none;
+				}
+			}
+			&__preview{
+				.img-wrapper{
+					img{
+						max-width: 180px;
+					}
+				}
+			}
+			&__text{
+				.text-box{
+					max-height: 146px;
+				}
+			}
+			&__number{
+				padding-top: 130px
+			}
+			.price{
+				position: absolute;
+				top: 0;
+				right: 0;
+				margin-top: 0;
+			}
+		}
+		&-categories{
+			@include transform(scale(0.6));
+			bottom: -120px;
+			right: -120px;
+			.price{
+				font-size: 28px;
+			}
+		}
+	}
+
+	.onepage-pagination li a{
+		height: 50px;
+	}
+
+	.onePage-scroll{
+		.page-title{
+			h2{
+				font-size: 22px;
+				line-height: 26px;
+			}
+		}
+	}
+
+	.description{
+		.title{
+			span{
+				&.before-text{
+					font-size: 32px;
+					line-height: 36px;
+				}
+				&.after-text{
+					font-size: 32px;
+					line-height: 36px;
+				}
+			}
+		}
+		.img-wrapper{
+			max-width: 160px;
+			border-width: 5px;
+		}
+		&-container{
+			background-size: contain;
+		}
+		.text-bottom{
+			margin-top: 10px;
+			font-size: 24px;
+			line-height: 28px;
+		}
+		.textImg{
+			font-size: 20px;
+			line-height: 24px;
+		}
+	}
+
+	.productCard{
+		&-slider{
+			max-width: 320px;
+		}
+		&-text{
+			p, li{
+				font-size: 14px;
+				line-height: 18px;
+			}
+			.text-bottom{
+				margin-top: 15px;
+			}
+		}
+	}
+
+	.benefits{
+		&-item{
+			margin-bottom: 10px;
+		}
+		.img-wrapper{
+			img{
+				max-width: 40%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-height : 479px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-height : 320px) {
+
+}

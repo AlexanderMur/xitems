@@ -1,0 +1,121 @@
+.variable-item-span, .value span {
+    margin-right: 0 !important;
+}
+
+.variations_form.cart {
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+}
+
+.variations_form .variable-items-wrapper li {
+    margin-right: 25px !important;
+}
+
+.quantity input {
+    font-size: 22px;
+    line-height: 26px;
+    border: none;
+    background-color: transparent;
+    max-width: 70px;
+    text-align: center;
+}
+
+.quantity input::-webkit-outer-spin-button,
+.quantity input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.checkout-item .woocommerce {
+    height: 100%;
+}
+
+.woocommerce-cart-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.active-form {
+    display: block;
+}
+
+.variable-item.color-variable-item {
+    width: 34px;
+    height: 34px;
+    border-radius: 50% !important;
+}
+
+.variable-items-wrapper:not(.color-variable-wrapper) {
+    justify-content: center;
+}
+
+.variable-item.color-variable-item span,
+.variable-item.color-variable-item span:after,
+.variable-item.color-variable-item span:before {
+    border-radius: 50% !important;
+}
+
+.wp-opacity {
+    z-index: 1000;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgb(255, 255, 255);
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.stars a  {
+    color: #ff2700;
+}
+
+.reset_variations {
+    position: relative;
+    top: 5px;
+    right: 15px;
+}
+
+.woocommerce .blockUI.blockOverlay:before,.woocommerce .loader:before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -.5em;
+    margin-top: -.5em;
+    display: block;
+    content: "";
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+    background: url('../img/loader.gif') center center;
+    background-size: cover;
+    line-height: 1;
+    text-align: center;
+    font-size: 2em;
+}
+
+.catalog-item__preview form.cart:not(.variations_form),
+.addToCartSingle form.cart:not(.variations_form) {
+    display: none;
+}
+
+.admin-bar .header.isOnePageScroll{
+    top: 32px
+}
+
+.catalog-categories {
+    transition: 1s;
+}
+
+.pageControls {
+    display: none;
+}

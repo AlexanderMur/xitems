@@ -1,0 +1,226 @@
+.checkout{
+	display: none;
+	position: fixed;
+	background-color: rgba(0,0,0,.5);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	max-height: 100vh;
+	overflow: hidden;
+	&-item{
+		position: absolute;
+		top: 0;
+		right: -100%;
+		width: 100%;
+		height: 100%;
+		max-width: 640px;
+		background-color: #fff;
+		box-shadow: 0px 5px 4.75px 0.25px rgba(0, 0, 0, 0.5);
+		padding: 100px 66px 30px;
+		max-height: 100vh;
+		overflow-y: auto;
+		@include transition(all .7s linear);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&__trigger{
+			width: 78px;
+			height: 78px;
+			display: block;
+			background-color: transparent;
+			border: none;
+			position: absolute;
+			top: 55px;
+			right: 603px;
+			&:hover{
+				opacity: .8;
+			}
+		}
+		&.active{
+			right: 0%;
+		}
+	}
+	&-cart{
+		&__container{
+			display: block;
+			width: 100%;
+			max-height: 50vh;
+			overflow-y: auto;
+		}
+		&__item{
+			display: flex;
+			flex-wrap: wrap;
+			position: relative;
+			margin-bottom: 100px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			.img-wrapper{
+				display: block;
+				width: 100%;
+				max-width: 160px;
+				flex: 1 1 160px;
+				&:hover{
+					opacity: .5;
+				}
+			}
+			.text{
+				flex: 1 1 215px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				padding: 10px 10px 0;
+			}
+			.head{
+				display: block;
+				width: 100%;
+			}
+			.title{
+				display: block;
+				width: 100%;
+				font-weight: 500;
+				font-size: 22px;
+				line-height: 28px;
+				color: #000;
+			}
+			.sub-title{
+				display: block;
+				width: 100%;
+				font-size: 20px;
+				line-height: 24px;
+				font-weight: 400;
+			}
+			.functional{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			.price{
+				display: flex;
+				align-items: center;
+				flex: 1 1 110px;
+				span{
+					margin-right: 12px;
+					font-size: 22px;
+					line-height: 26px;
+					font-weight: 300;
+				}
+			}
+			.add-product{
+				flex: 1 1 110px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				&-button{
+					display: block;
+					position: relative;
+					width: 20px;
+					height: 20px;
+					background-color: transparent;
+					border: none;
+					span{
+						display: block;
+						width: 100%;
+						height: 2px;
+						background-color: #f44336;
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						@include transform(translate(-50%));
+					}
+				}
+				&-plus{
+					width: 24px;
+					height: 24px;
+					span{
+						background-color: #4caf50;
+						height: 4px;
+						&:nth-child(2){
+							@include transform(translate(-50%) rotate(-90deg));
+						}
+					}
+				}
+				&-count{
+					font-size: 22px;
+					line-height: 26px;
+					border: none;
+					background-color: transparent;
+					max-width: 70px;
+					text-align: center;
+				}
+			}
+			.remove-item{
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 20px;
+				height: 20px;
+				background-color: transparent;
+				border: none;
+				span{
+					display: block;
+					width: 100%;
+					height: 2px;
+					background-color: black;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					&:nth-child(1){
+						@include transform(translate(-50%) rotate(-45deg));
+					}
+					&:nth-child(2){
+						@include transform(translate(-50%) rotate(45deg));
+					}
+				}
+			}
+		}
+	}
+	&-bottom{
+		width: 100%;
+	}
+	&-totalPrice{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		span{
+			font-size: 22px;
+		}
+		.title{
+			font-weight: 500;
+		}
+		.value{
+			display: flex;
+			align-items: center;
+			span{
+				margin-right: 12px;
+			}
+		}
+	}
+	&-order{
+		padding-top: 50px;
+		top: 100%;
+		left: initial;
+		right: 0;
+		&.active{
+			top: 0;
+		}
+		h3{
+			font-weight: 400;
+			margin-bottom: 50px;
+		}
+		h4{
+			margin-bottom: 40px;
+		}
+		&__container{
+			width: 100%;
+			form{
+				padding-left: 50px;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.aboutUs{
+	padding: 20px 0 70px;
+	&-item{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 0 -20px;
+		&__text{
+			width: calc(60% - 40px);
+			margin: 10px 20px;
+		}
+		&__img{
+			width: calc(40% - 40px);
+			margin: 0px 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img{
+				max-width: 200px;
+			}
+		}
+		&:nth-child(odd){
+			.aboutUs-item__text{
+				order: 2;
+			}
+		}
+	}
+}
