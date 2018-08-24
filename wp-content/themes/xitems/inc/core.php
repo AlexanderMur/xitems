@@ -50,3 +50,7 @@ function func2($name){
 function func5(){
     return '1321212';
 }
+
+function func7() {
+    return '2';
+}
