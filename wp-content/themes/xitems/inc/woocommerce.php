@@ -120,8 +120,16 @@ add_filter( 'woocommerce_cart_item_price', function($price){
 },300 );
 
 add_filter( 'nonce_user_logged_out', function($id,$action){
-    if($action == 'apply-coupon' || $action == 'remove-coupon'){
+    if($action == 'apply-coupon' || $action == 'remove-coupon' || $action == 'woocommerce-process_checkout'){
         return 0;
     }
     return $id;
 },500 ,2);
+
+
+
+add_action('woocommerce_checkout_process',function(){
+   if(email_exists($_POST['billing_email'])){
+       unset($_POST['createaccount']);
+   }
+});
