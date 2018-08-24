@@ -41,3 +41,7 @@ function func($name){
 function func2($name){
     return $name . ' works';
 }
+
+function func5(){
+    return '132';
+}
