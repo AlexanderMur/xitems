@@ -124,12 +124,9 @@ jQuery(document).ready(function ($) {
       return false;
     } );
 
-    let testx = function() {
-        let test = 'res';
-
-    };
-
-    return false;
+    function func3(){
+      return '131331';
+    }
   });
 
   /*привет*/

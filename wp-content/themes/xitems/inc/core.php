@@ -37,3 +37,7 @@ function array_to_cols($arr,$num){
 function func($name){
     return $name . ' works';
 }
+
+function func2($name){
+    return $name . ' works';
+}
