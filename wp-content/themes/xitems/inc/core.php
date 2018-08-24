@@ -32,6 +32,5 @@ function array_to_cols($arr,$num){
     return $cols;
 }
 
-function func3(){
-    return 123;
-}
+
+
