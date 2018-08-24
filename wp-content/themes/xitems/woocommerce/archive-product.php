@@ -101,10 +101,16 @@
                                     <p><?php echo $product->get_description() ?></p>
                                 </div>
                                 <button class="text-box-expand">Больше</button>
-                                <button class="main-button add-to-cart">
-                                    <span>В корзину</span>
-                                    <i class="icon icon-add"></i>
-                                </button>
+                                <?php
+                                if($product->is_purchasable()){
+                                    ?>
+                                    <button class="main-button add-to-cart">
+                                        <span>В корзину</span>
+                                        <i class="icon icon-add"></i>
+                                    </button>
+                                    <?php
+                                }
+                                ?>
                             </div>
                         </div>
                         <a href="#" class="more-link js-more-link">подробнее</a>
