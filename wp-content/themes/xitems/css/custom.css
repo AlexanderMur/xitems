@@ -108,9 +108,6 @@
     display: none;
 }
 
-.admin-bar{
-    height: calc(100% - 16px);
-}
 .admin-bar .header.isOnePageScroll{
     top: 32px
 }
