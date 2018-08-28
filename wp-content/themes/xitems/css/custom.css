@@ -108,6 +108,9 @@
     display: none;
 }
 
+.admin-bar{
+    height: calc(100% - 16px);
+}
 .admin-bar .header.isOnePageScroll{
     top: 32px
 }
@@ -118,4 +121,16 @@
 
 .pageControls {
     display: none;
+}
+
+.addToCartSingle .variations_form {
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 991px) {
+    .addToCartSingle .variations_form {
+        position: absolute;
+        left: 10px;
+        top: -5px;
+    }
 }

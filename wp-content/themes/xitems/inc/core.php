@@ -31,6 +31,3 @@ function array_to_cols($arr,$num){
     }
     return $cols;
 }
-
-
-5656;

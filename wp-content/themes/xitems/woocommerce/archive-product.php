@@ -37,7 +37,7 @@
                     foreach ($posts as $key => $post) {
                         $product = wc_setup_product_data($post);
                         $icon = carbon_get_post_meta($product->get_id(), 'product_icon');
-                        if ($key == 8) {
+                        if ($key == 8 || $key == 9) {
                             ?>
                             <li category="<?php echo $product->get_id(); ?>">
                                 <i class="icon icon-map <?php echo 'icon-' . $icon ?>"></i>

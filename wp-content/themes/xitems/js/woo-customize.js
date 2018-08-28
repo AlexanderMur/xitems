@@ -87,6 +87,7 @@ jQuery(document).ready(function ($) {
         $('html').append(document.body);
         $('body.home').find('.slick-next').css('right', '-100px');
         $('body.home').find('.slick-prev').css('left', '-100px');
+        $('body.home').find('.catalog-item__sale').css('transform', 'translateY(30%)');
         $('body.home').find('.catalog-categories').css('right', '-700px');
         $('html').find('section.description').css('height', '100vh')
       }

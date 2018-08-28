@@ -182,7 +182,8 @@ $ = jQuery;
           item.eq(i).attr('right', zpx);
           zpy += 160;
         } else {
-          zpx = -250;
+          zpx = -55;
+          zpy = 480;
           item.eq(i).css({'right': zpx + 'px', 'top': zpy + 'px'});
           item.eq(i).attr('top', zpy);
           item.eq(i).attr('right', zpx);

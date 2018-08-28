@@ -15,7 +15,7 @@ add_action('carbon_fields_register_fields', 'crb_attach_theme_options');
 function crb_attach_theme_options()
 {
 
-    Container::make('theme_options', __('Настройки xItems иконки', 'crb'))
+    $page = Container::make('theme_options', __('Настройки xItems иконки', 'crb'))
         ->add_tab('Icons', array(
             Field::make('complex', 'xitems_icons', 'Иконки')
                 ->set_layout('tabbed-horizontal')
@@ -29,6 +29,7 @@ function crb_attach_theme_options()
                 )),
         ));
     Container::make('theme_options', __('О нас', 'crb'))
+        ->set_page_parent($page)
         ->add_tab('О нас', array(
             Text_Field::make('text', 'about_us_title', 'Заголовок'),
             Text_Field::make('text', 'about_us_lead', 'Подзаголовок'),
@@ -110,6 +111,22 @@ function crb_attach_theme_options()
             Field::make('rich_text', 'main_section', 'Главная секция'),
         ));
 
+    Container::make('post_meta', __('Главная секция(добавление через поля)', 'crb'))
+        ->where('post_type', '=', 'product')
+        ->add_fields(array(
+            Field::make('checkbox', 'description_show', 'Показывать эту секцию'),
+            Field::make('text', 'description_before_title', 'Текст до заголовка'),
+            Field::make('text', 'description_title', 'Заголовок'),
+            Field::make('text', 'description_under_title', 'Текст под Заголовком'),
+            Field::make('text', 'description_after_title', 'Текст после Заголовка'),
+            Field::make('text', 'description_under_image_right_text', 'Текст под картинкой'),
+            Field::make('text', 'description_after_image_right_text', 'Текст после картинки'),
+            Field::make('image', 'description_background', 'Фон'),
+            Field::make('image', 'description_image_left', 'Картинка слева'),
+            Field::make('image', 'description_image_right', 'Картинка справа'),
+
+        ));
+
     Container::make('post_meta', __('Характеристики', 'crb'))
         ->where('post_type', '=', 'product')
         ->add_fields(array(
@@ -160,21 +177,6 @@ function crb_attach_theme_options()
                 ->set_type(array('video')),
             Field::make('image', 'product_video_poster', 'Привью видео')
                 ->set_width(85),
-
-        ));
-    Container::make('post_meta', __('Главная секция(старая версия редактора)', 'crb'))
-        ->where('post_type', '=', 'product')
-        ->add_fields(array(
-            Field::make('checkbox', 'description_show', 'Показывать эту секцию'),
-            Field::make('text', 'description_before_title', 'Текст до заголовка'),
-            Field::make('text', 'description_title', 'Заголовок'),
-            Field::make('text', 'description_under_title', 'Текст под Заголовком'),
-            Field::make('text', 'description_after_title', 'Текст после Заголовка'),
-            Field::make('text', 'description_under_image_right_text', 'Текст под картинкой'),
-            Field::make('text', 'description_after_image_right_text', 'Текст после картинки'),
-            Field::make('image', 'description_background', 'Фон'),
-            Field::make('image', 'description_image_left', 'Картинка слева'),
-            Field::make('image', 'description_image_right', 'Картинка справа'),
 
         ));
     Container::make('post_meta', __('Кастомные секции', 'crb'))
