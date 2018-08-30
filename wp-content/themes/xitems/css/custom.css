@@ -131,3 +131,17 @@
         top: -5px;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .pageControls .wrapper {
+        overflow: visible;
+    }
+
+    .pageControls .variations_form {
+        top: -17px;
+    }
+
+    .pageControls .variations_form tr {
+        display: inline-block;
+    }
+}

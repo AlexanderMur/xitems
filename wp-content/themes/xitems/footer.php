@@ -33,6 +33,7 @@
 <div class="icon-load"></div>
 <div class="checkout">
   <div class="checkout-item checkout-cart" id="checkoutCart">
+      <?php wc_print_notices(); ?>
     <div style="height: 100%">
         <?php echo do_shortcode('[woocommerce_cart]'); ?>
     </div>
@@ -42,9 +43,9 @@
         <?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
       <input type="hidden" name="payment_method" value="cod">
       <input type="hidden" name="billing_last_name" value="Customer">
-      <!--<input type="hidden" name="billing_country" value="UA">
+      <input type="hidden" name="billing_country" value="UA">
       <input type="hidden" name="billing_state" value="Украина">
-      <input type="hidden" name="billing_address_1" value="Street">-->
+      <input type="hidden" name="billing_address_1" value="Street">
       <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" id="createaccount" type="hidden" name="createaccount" value="1">
       <div class="checkout-order__container">
         <h3>Оформление заказа</h3>

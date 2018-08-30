@@ -3366,7 +3366,8 @@ img.mfp-img {
 		order: 0; }
 	.catalog-item__sale {
 		bottom: 0;
-		position: absolute;
+		position: fixed;
+        background-color: #fff;
 		border-left: 5px solid #4caf50; }
 	.catalog-item .more-link {
 		display: block;
@@ -3572,9 +3573,6 @@ img.mfp-img {
 		display: block; }
 	.catalog-item__sale:before, .catalog-item__sale:after {
 		display: none;
-	}
-	.catalog-item__sale.active {
-		transform: translateY(-147%);
 	}
 	.catalog-item__sale h3 {
 		overflow: hidden;
