@@ -62,7 +62,8 @@
                     if ($gift) {
                         $qty = $gift->get_stock_quantity();
                         $qty = $qty ?: 34;
-                        $gift_attrs = "sale='true' gift_title='{$gift->get_name()}' gift_qty={$qty}";
+                        $trimName = mb_strimwidth($gift->get_name(), 0, 30, '...' );
+                        $gift_attrs = "sale='true' gift_title='{$trimName}' gift_qty={$qty}";
                     }
                     ?>
                     <div class="catalog-item" price="<?php echo $product->get_price() ?>" <?php echo $gift_attrs ?>
@@ -91,7 +92,7 @@
                                     </a>
                                     <h4 class="sub-title"><?php echo $product->get_short_description() ?></h4>
                                     <div class="price">
-                                        <span></span>
+                                        <span id="amount_phone"></span>
                                         <img src='<?php echo get_template_directory_uri() . '/' . "img/icon-cartCur.png" ?>'
                                              alt="">
                                     </div>
@@ -106,7 +107,7 @@
                                 </button>
                             </div>
                         </div>
-                        <a href="#" class="more-link">подробнее</a>
+                        <a href="#" class="more-link js-more-link">подробнее</a>
                     </div>
                     <?php
                 }

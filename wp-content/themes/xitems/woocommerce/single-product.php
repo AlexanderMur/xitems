@@ -69,7 +69,7 @@ $product;
                             ?>
 
                             <div class="img-wrapper">
-                                <?php echo wp_get_attachment_image($gallery_image_id, 'medium') ?>
+                                <?php echo wp_get_attachment_image($gallery_image_id, 'medium_large') ?>
                             </div>
                             <?php
                         }

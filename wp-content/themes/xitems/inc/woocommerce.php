@@ -106,6 +106,11 @@ function woo_custom_redirect_after_purchase() {
         wp_redirect( $redirect );
         exit;
     }
+
+    if ( is_checkout() && !empty( wc_notice_count( 'error' ) )) {
+        wp_redirect( site_url('/') );
+        exit;
+    }
 }
 add_filter( 'woocommerce_cart_item_price', function($price){
     if($price == 'Free!'){

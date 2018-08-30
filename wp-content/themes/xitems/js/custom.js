@@ -350,7 +350,7 @@ $ = jQuery;
       }
       handler()
     }
-    console.log(window.initSingle)
+    //console.log(window.initSingle)
     if ($('.js-mark').length) {
 
     }
