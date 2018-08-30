@@ -138,7 +138,7 @@
     }
 
     .pageControls .variations_form {
-        top: -17px;
+        position: static;
     }
 
     .pageControls .variations_form tr {
