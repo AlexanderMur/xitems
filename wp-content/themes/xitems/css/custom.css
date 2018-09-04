@@ -135,6 +135,12 @@ input[type=checkbox].js-styled{
         left: 10px;
         top: -5px;
     }
+    .description-col {
+        margin-bottom: 10px;
+    }
+    .description-col .textImg {
+        margin-right: 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
