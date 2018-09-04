@@ -43,8 +43,8 @@
                     <span class="header-cartBtn-amount"><?php echo WC()->cart->get_cart_contents_count() ?></span>
                 </button>
                 <div class="header-logo-mobile">
-                    <a href="#" class="header-logo">
-                        <img src='<?php echo get_template_directory_uri() . "/img/logo.svg" ?>' alt="">
+                    <a href="<?php echo site_url('/') ?>" class="header-logo">
+                        <?php echo wp_get_attachment_image(xi_option('xitems_logo'),'200x200') ?>
                     </a>
                 </div>
                 <div class="header-nav__container">
